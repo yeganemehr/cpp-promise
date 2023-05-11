@@ -1,3 +1,6 @@
+[![PlatformIO Registry](https://badges.registry.platformio.org/packages/yeganemehr/library/promise.svg)](https://registry.platformio.org/libraries/yeganemehr/promise)
+[![Build Examples](https://github.com/yeganemehr/cpp-promise/actions/workflows/build-examples.yml/badge.svg)](https://github.com/yeganemehr/cpp-promise/actions/workflows/build-examples.yml)
+
 # General Information
 I tried to build fluent API for making and manging promises in a generic and efficent way.  
 So technically this code run on any platform but I did tested it only on esp8266 + Ardunio platform.

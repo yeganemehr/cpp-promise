@@ -1,6 +1,6 @@
 {
 	"$schema": "https://raw.githubusercontent.com/platformio/platformio-core/develop/platformio/assets/schema/library.json",
-	"name": "Promise",
+	"name": "promise",
 	"version": "1.0.0",
 	"description": "It's a es6-like promise for c++ can used widely in async projects.",
 	"keywords":["async", "promise", "es6"],
