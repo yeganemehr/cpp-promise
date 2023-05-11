@@ -1,0 +1,19 @@
+{
+	"$schema": "https://raw.githubusercontent.com/platformio/platformio-core/develop/platformio/assets/schema/library.json",
+	"name": "Promise",
+	"version": "1.0.0",
+	"description": "It's a es6-like promise for c++ can used widely in async projects.",
+	"keywords":["async", "promise", "es6"],
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/yeganemehr/cpp-promise.git"
+	},
+	"authors": [{
+		"name": "Amir H. Yeganemehr",
+		"maintainer": true
+	}],
+	"frameworks": "*",
+	"platforms": "*",
+	"homepage": "https://github.com/yeganemehr/cpp-promise"
+}
