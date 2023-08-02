@@ -47,7 +47,7 @@ public:
 	Promise<void> *redirectSuccessTo(Promise<void> *promise);
 
 	template <typename C>
-	Promise<void> *redirectRejectTo(Promise<C> *promise);
+	Promise<void> *redirectRejectTo(Promise<C> *promise)
 	{
 		return this->onFail(std::bind(&Promise<C>::reject, promise, std::placeholders::_1));
 	}
