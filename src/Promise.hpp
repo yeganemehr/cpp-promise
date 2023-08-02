@@ -45,8 +45,13 @@ public:
 	void reject(const std::exception &reason);
 	Promise<void> *redirectTo(Promise<void> *promise);
 	Promise<void> *redirectSuccessTo(Promise<void> *promise);
+
 	template <typename C>
 	Promise<void> *redirectRejectTo(Promise<C> *promise);
+	{
+		return this->onFail(std::bind(&Promise<C>::reject, promise, std::placeholders::_1));
+	}
+
 	void free();
 	void freeOnFinish();
 

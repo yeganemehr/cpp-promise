@@ -105,12 +105,6 @@ Promise<void> *Promise<void>::redirectSuccessTo(Promise<void> *promise)
 	return this->onSuccess(std::bind(&Promise<void>::resolve, promise));
 }
 
-template <typename C>
-Promise<void> *Promise<void>::redirectRejectTo(Promise<C> *promise)
-{
-	return this->onFail(std::bind(&Promise<C>::reject, promise, std::placeholders::_1));
-}
-
 void Promise<void>::free()
 {
 	delete this;
