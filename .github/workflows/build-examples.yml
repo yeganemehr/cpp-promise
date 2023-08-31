@@ -8,6 +8,7 @@ jobs:
     strategy:
       matrix:
         example: [esp8266-arduino-heap, esp8266-arduino-stack]
+        env_name: [nodemcuv2, wemos_d1_mini32]
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -22,6 +23,6 @@ jobs:
           python -m pip install --upgrade pip
           pip install --upgrade platformio
 
-      - name: Build ${{ matrix.example }}
+      - name: Build ${{ matrix.example }} on ${{ matrix.env_name }}
         working-directory: examples/${{ matrix.example }}/
-        run: pio run
+        run: pio run -e ${{ matrix.env_name }}

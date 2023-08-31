@@ -8,7 +8,7 @@ Promise<uint32_t> promise;
 void makeAPromise(Promise<uint32_t> *promise)
 {
 	t.setTimeout([promise]() {
-		uint32_t result = ESP.random();
+		uint32_t result = random();
 		if (result >> 31) {
 			promise->reject(std::exception());
 		} else {
