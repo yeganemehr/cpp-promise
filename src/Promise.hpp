@@ -3,6 +3,7 @@
 
 #include <functional>
 #include <exception>
+#include <vector>
 
 template <typename T>
 using promise_resolve_cb_t = std::function<void(const T &)>;
