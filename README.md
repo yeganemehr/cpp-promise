@@ -21,7 +21,7 @@ Promise<uint32_t> *makeAPromise()
 	auto promise = new Promise<uint32_t>();
 
 	t.setTimeout([promise]() {
-		uint32_t result = ESP.random();
+		uint32_t result = random();
 		if (result >> 31) {
 			promise->reject(std::exception());
 		} else {
